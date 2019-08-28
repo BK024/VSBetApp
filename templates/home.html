@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VSBetApp - Home page</title>
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+        {% for k, v in demData.items() %}
+            <tr>
+               <th> {{ k }} </th>
+               <td> {{ v }} </td>
+            </tr>
+        {% endfor %}
+    {% endblock %}
+
+</body>
+</html>
