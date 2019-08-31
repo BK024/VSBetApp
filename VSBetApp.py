@@ -24,7 +24,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return "Build by BK024.\nFor the source code look at {}".format(make_link("https://github.com/BK024/VSBetApp", "my GitHub account."))
+    return "A Python WebApp for tracking bets regarding the 2020 USA presidential elections.\nBuild by BK024.\nFor the source code look at {}".format(make_link("https://github.com/BK024/VSBetApp", "my GitHub account."))
 
 
 def make_bet(participant_OD, bet_data):
