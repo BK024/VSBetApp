@@ -8,11 +8,9 @@
 <body>
     {% extends "template.html" %}
     {% block content %}
-        {% for k, v in demData.items() %}
-            <tr>
-               <th> {{ k }} </th>
-               <td> {{ v }} </td>
-            </tr>
+        {% for row in row_list %}
+            {{ row }}
+            <br>
         {% endfor %}
     {% endblock %}
 
