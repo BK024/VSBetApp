@@ -26,13 +26,6 @@ class Bet:
     def make_row_OD_list_for_html(self):
         row_OD_list = []
         cnt = 0
-        # participant_list_sorted = []
-        # for x in self.bet_data_OD.keys():
-        #     for xx in self.bet_participant_OD:
-        #         if x == xx.entry_option:
-        #             participant_list_sorted.append(xx.)
-        # self.bet_participant_OD = OD(sorted(self.bet_participant_OD.items(), key=lambda x: self.bet_data_OD[x[1].entry_option]))
-        # newdct = OrderedDict((key, olddct[key]) for key in sortedlist)
         for k, v in self.bet_participant_OD.items():
             v: BetParticipant
             row = OD()
