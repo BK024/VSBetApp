@@ -13,10 +13,11 @@
 <body>
     {% extends "template.html" %}
     {% block content %}
-        {% for row in row_list %}
-            {{ row }}
-            <br>
+
+        {% for table in table_list %}
+             {{ table.translate_to_html_str()|safe }}
         {% endfor %}
+
     {% endblock %}
 
 </body>
