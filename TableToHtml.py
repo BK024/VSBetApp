@@ -1,3 +1,5 @@
+# As deployed to BK024.pythonanywhere.com with version 0.8.
+
 """
 Class that holds a table (in the form of python objects) and translates those to html code that is a table.
 Will be hardcoded for translating the first bet to a table. But will be made more flexible.
@@ -39,3 +41,7 @@ class Table:
                 row_html_string = row_html_string + "<td>{}</td>".format(v)
             row_html_string = row_html_string + "</tr>"
         return row_html_string
+
+    @staticmethod
+    def make_html_hyper_link(link, text):
+        return '<a href="{}">{}</a>'.format(link, text)

@@ -1,3 +1,5 @@
+# As deployed to BK024.pythonanywhere.com with version 0.8.
+
 class BetParticipant:
     def __init__(self, participant, bet_prediction, bet_amount):
         self.participant = participant

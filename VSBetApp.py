@@ -1,9 +1,13 @@
+# As deployed to BK024.pythonanywhere.com with version 0.8.
+
 from flask import Flask, render_template
 from PollScraper import getDemCandidatePollData as getDemData
 from Participant import Participant
 from BetParticipant import BetParticipant
+from TableToHtml import Table
 from Bet import Bet
 from collections import OrderedDict as OD
+make_link = Table.make_html_hyper_link
 
 app = Flask(__name__)
 
@@ -20,7 +24,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return "Build by BK024."
+    return "Build by BK024.\nFor the source code look at {}".format(make_link("https://github.com/BK024/VSBetApp", "my GitHub account."))
 
 
 def make_bet(participant_OD, bet_data):
