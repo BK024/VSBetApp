@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>VSBetApp - Home page</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
     {% extends "template.html" %}
     {% block content %}
-        {% for row in row_list %}
-            {{ row }}
-            <br>
+
+        {% for table in table_list %}
+             {{ table.translate_to_html_str()|safe }}
         {% endfor %}
+
     {% endblock %}
 
 </body>
